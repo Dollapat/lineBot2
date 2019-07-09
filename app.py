@@ -24,11 +24,11 @@ def callback():
     userText = decoded["events"][0]['message']['text']
     #sendText(user,userText)
      if (usertext == 'Hi') :
-        sendtext(user,usertext)('Hello','What is yourname?')
+        sendtext(user,'Hello','What is yourname?')
     elif (usertext == 'Nine') :
-        sendtext(user,usertext)('Nice to meet you,Nine')
+        sendtext(user,'Nice to meet you,Nine')
     else :
-        sendtext(user,usertext)('Again please')
+        sendtext(user,'Again please')
 
     return '',200
 
