@@ -24,9 +24,9 @@ def callback():
     userText = decoded['queryResult']['intent']['displayName']#userText = decoded["events"][0]['message']['text']
     #sendText(user,userText)
     if   (usertext == 'Hi') :
-         sendtext(user,'Hello','What is yourname?')
-    elif (usertext == 'Nine') :
-         sendtext(user,'Nice to meet you,Nine')
+         sendtext(user,'Hello')
+    elif (usertext == 'CYA') :
+         sendtext(user,'CU2')
     else :
          sendtext(user,'Again please')
 
