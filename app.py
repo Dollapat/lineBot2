@@ -30,7 +30,6 @@ def callback():
         sendText(user,'CU2')
     else :
         sendText(user,'Again please')
-
     return '',200
 
 def sendText(user, text):
