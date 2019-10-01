@@ -1,3 +1,4 @@
+
 from flask import Flask, jsonify, request
 import os
 import json
@@ -20,15 +21,16 @@ def callback():
     json_line = request.get_json()
     json_line = json.dumps(json_line)
     decoded = json.loads(json_line)
-    user = decoded["events"][0]['replyToken']
-    userText = decoded["events"][0]['message']['text']
+    user = decoded['originalDetectIntentRequest']['payload']['data']['replyToken']#user = decoded["events"][0]['replyToken']
+    userText = decoded['queryResult']['intent']['displayName']#userText = decoded["events"][0]['message']['text']
     #sendText(user,userText)
-    if (userText == 'Hi') :
+    if   (userText == 'Hi') :
         sendText(user,'Hello')
-    elif (userText == 'CYA') :
+    elif (userText == 'Bye') :
         sendText(user,'CU2')
     else :
         sendText(user,'Again please')
+
     return '',200
 
 def sendText(user, text):
